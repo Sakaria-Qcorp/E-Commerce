@@ -9,7 +9,7 @@ Category.hasMany(Product, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
-Product.belongsTo(User, {
+Product.belongsTo(Category, {
   foreignKey: 'category_id',
 });
 Product.hasMany(Tag, {
