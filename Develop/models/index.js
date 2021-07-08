@@ -10,7 +10,14 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE',
 });
 Product.belongsTo(User, {
-  foreignKey: 'xategory_id',
+  foreignKey: 'category_id',
+});
+Product.hasMany(Tag, {
+  foreignKey: 'product_id',
+  onDelete: 'CASCADE',
+});
+Tag.belongsTo(Product, {
+  foreignKey: 'product_id',
 });
 
 // Categories have many Products
